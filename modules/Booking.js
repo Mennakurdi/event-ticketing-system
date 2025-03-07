@@ -3,4 +3,11 @@ const bookingSchema = new mongoose.Schema({
     event: { type: mongoose.Schema.Types.ObjectId, ref: "Event", required: true },
     ticketsBooked: { type: Number, required: true },
     totalPrice: { type: Number, required: true },
+    status: { 
+        type: String, 
+        enum: ["Pending", "Confirmed", "Canceled"], 
+        default: "Pending" 
+      }
+    }, { timestamps: true });
     
+    module.exports = mongoose.model("Booking", bookingSchema);
