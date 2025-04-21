@@ -8,37 +8,39 @@ const {
   getUserById,
   updateUserRole,
   deleteUser,
-  getEventAnalytics, // Analytics function imported from the controller
+  getEventAnalytics, 
 } = require('../controllers/userController');
 
 const authenticate = require('../middleware/authenticate');
 const { authorizeRole } = require('../middleware/authorization');
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 const { authenticate, authorize } = require('../middleware/authorization');
 // ✅ PUT /api/v1/users/:id → Admin updates role
 router.put('/:id', authenticate, authorize('admin'), updateUserRole);
 >>>>>>> 3c2bdd4 (Initial project commit)
+=======
+>>>>>>> e296a4d (Initial commit from Engy)
 
-// GET /api/v1/users/profile → current user
+
 router.get('/profile', authenticate, getProfile);
 
-// PUT /api/v1/users/profile → update profile
+
 router.put('/profile', authenticate, updateProfile);
 
-// GET /api/v1/users → admin only
+
 router.get('/', authenticate, authorizeRole('admin'), getUsers);
 
-// GET /api/v1/users/:id → admin only
+
 router.get('/:id', authenticate, authorizeRole('admin'), getUserById);
 
-// PUT /api/v1/users/:id → admin only
 router.put('/:id', authenticate, authorizeRole('admin'), updateUserRole);
 
-// DELETE /api/v1/users/:id → admin only
+
 router.delete('/:id', authenticate, authorizeRole('admin'), deleteUser);
 
-// GET /api/v1/users/events/analytics → event organizer's event analytics
+
 router.get('/events/analytics',authenticate, authorizeRole('organizer'), getEventAnalytics );
 
 module.exports = router;
