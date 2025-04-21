@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
+
 const eventController = require('../controllers/eventController'); 
 const {
   createEvent,
@@ -30,6 +31,7 @@ router.get('/:id', eventController.getEventById);
 
 router.post('/create', authenticate, isOrganizer, eventController.createEvent);
 router.put('/:id', authenticate, authorizeRole('organizer', 'admin'), updateEvent);
+
 
 
 router.put('/:id/edit', authenticate, isOrganizer, eventController.updateEvent);
