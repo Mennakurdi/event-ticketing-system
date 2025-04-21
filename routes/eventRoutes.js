@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const express = require('express');
 const router = express.Router();
 
@@ -70,4 +71,6 @@ router.delete('/:id', authenticate, isOrganizer, eventController.deleteEvent);
 // router.get('/analytics', authenticate, isOrganizer, eventController.getAnalytics);
 
 module.exports = router;
+=======
+>>>>>>> 9a312d1 (Update eventRoutes.js)
 
