@@ -13,6 +13,12 @@ const {
 
 const authenticate = require('../middleware/authenticate');
 const { authorizeRole } = require('../middleware/authorization');
+<<<<<<< HEAD
+=======
+const { authenticate, authorize } = require('../middleware/authorization');
+// ✅ PUT /api/v1/users/:id → Admin updates role
+router.put('/:id', authenticate, authorize('admin'), updateUserRole);
+>>>>>>> 3c2bdd4 (Initial project commit)
 
 // GET /api/v1/users/profile → current user
 router.get('/profile', authenticate, getProfile);
