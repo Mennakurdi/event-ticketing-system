@@ -8,11 +8,13 @@ const {
   getUserById,
   updateUserRole,
   deleteUser,
-  getEventAnalytics, 
+
+  getEventAnalytics, // Analytics function imported from the contro
 } = require('../controllers/userController');
 
 const authenticate = require('../middleware/authenticate');
 const { authorizeRole } = require('../middleware/authorization');
+
 
 
 router.get('/profile', authenticate, getProfile);
@@ -30,6 +32,7 @@ router.put('/:id', authenticate, authorizeRole('admin'), updateUserRole);
 
 
 router.delete('/:id', authenticate, authorizeRole('admin'), deleteUser);
+
 
 
 router.get('/events/analytics',authenticate, authorizeRole('organizer'), getEventAnalytics );
