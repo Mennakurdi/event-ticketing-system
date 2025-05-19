@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const express = require('express');
 const router = express.Router();
 
@@ -79,6 +80,11 @@ const express = require('express');
 const router = express.Router();
 >>>>>>> b3bbdb9 (Update eventRoutes.js)
 
+=======
+const express = require('express');
+const router = express.Router();
+
+>>>>>>> main
 
 const eventController = require('../controllers/eventController'); 
 const {

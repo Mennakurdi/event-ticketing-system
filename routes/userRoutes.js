@@ -9,15 +9,21 @@ const {
   updateUserRole,
   deleteUser,
 <<<<<<< HEAD
+<<<<<<< HEAD
   getEventAnalytics, // Analytics function imported from the controller
 =======
   getEventAnalytics, 
 >>>>>>> 4beb8a1 (Commit only specific files or folders)
+=======
+
+  getEventAnalytics, // Analytics function imported from the contro
+>>>>>>> main
 } = require('../controllers/userController');
 
 const authenticate = require('../middleware/authenticate');
 const { authorizeRole } = require('../middleware/authorization');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // GET /api/v1/users/profile → current user
 router.get('/profile', authenticate, getProfile);
@@ -39,6 +45,9 @@ router.delete('/:id', authenticate, authorizeRole('admin'), deleteUser);
 
 // GET /api/v1/users/events/analytics → event organizer's event analytics
 =======
+=======
+
+>>>>>>> main
 
 router.get('/profile', authenticate, getProfile);
 
@@ -57,7 +66,11 @@ router.put('/:id', authenticate, authorizeRole('admin'), updateUserRole);
 router.delete('/:id', authenticate, authorizeRole('admin'), deleteUser);
 
 
+<<<<<<< HEAD
 >>>>>>> 4beb8a1 (Commit only specific files or folders)
+=======
+
+>>>>>>> main
 router.get('/events/analytics',authenticate, authorizeRole('organizer'), getEventAnalytics );
 
 module.exports = router;
