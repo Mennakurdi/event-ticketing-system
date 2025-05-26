@@ -50,4 +50,3 @@ router.delete('/:id', authenticate, isOrganizer, eventController.deleteEvent);
 // router.get('/analytics', authenticate, isOrganizer, eventController.getAnalytics);
 
 module.exports = router;
-
