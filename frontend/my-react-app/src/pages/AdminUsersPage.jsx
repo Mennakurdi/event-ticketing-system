@@ -6,7 +6,7 @@ export default function AdminUsersPage() {
   const [users, setUsers] = useState([]);       // to hold fetched users
   const [loading, setLoading] = useState(true); // for loading state
 
-  // Runs once when the page loads
+  // Runs once when the page  
   useEffect(() => {
     const fetchUsers = async () => {
       try {
@@ -58,4 +58,5 @@ useEffect(() => {
       )}
     </div>
   );
+  console.error
 }
