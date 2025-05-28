@@ -10,7 +10,7 @@ export default function UserRow({ user, onUpdateRole, onDelete }) {
         <button 
           className="bg-yellow-400 px-2 py-1 rounded mr-2"
           onClick={() => onUpdateRole(user)}
-        >
+        > 
           Update Role
         </button>
         <button 
